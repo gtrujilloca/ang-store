@@ -1,12 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { ProductCardComponent } from '@components/product-card/product-card.component';
 import { Store } from '@ngrx/store';
 import { StoreService } from '@services/store.service';
 import { Observable } from 'rxjs';
-import { getProducts, loadProducts } from 'src/app/store/actions/product.action';
+import { loadProducts } from 'src/app/store/actions/product.action';
 import { selectProducts } from 'src/app/store/select/product.select';
 
 @Component({
-  selector: 'app-product-list',
+  selector: 'product-list',
+  standalone: true,
+  imports: [
+    CommonModule,
+    ProductCardComponent,
+  ],
+  providers: [],
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.scss']
 })

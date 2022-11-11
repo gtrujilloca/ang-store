@@ -1,0 +1,23 @@
+<div class="card">
+  <picture class="card__header">
+    <img [src]="product.images[0]" [alt]="product.title">
+  </picture>
+  <div class="card__body">
+    <span
+      class="card__category"
+      [ngClass]="getColor(product.category.id)"
+
+    >
+      {{ product.category.name }}
+    </span>
+    <h4 class="card__title">
+      {{ product.title }}
+    </h4>
+    <p class="card__desc">
+      {{ product.description }}
+    </p>
+    <small>
+      {{ product.price}}
+    </small>
+  </div>
+</div>

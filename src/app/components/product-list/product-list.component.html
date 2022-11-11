@@ -1,4 +1,6 @@
-
-{{
-  productList$ | async | json
-}}
+<section class="container">
+  <product-card
+    *ngFor="let product of productList$ | async"
+    [product]="product"
+  ></product-card>
+</section>

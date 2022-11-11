@@ -15,7 +15,6 @@ import { ProductEffects } from './store/effects/product.effect';
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +22,8 @@ import { ProductEffects } from './store/effects/product.effect';
     HttpClientModule,
     StoreModule.forRoot(ROOT_REDUCERS),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([ProductEffects])
+    EffectsModule.forRoot([ProductEffects]),
+    ProductListComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
