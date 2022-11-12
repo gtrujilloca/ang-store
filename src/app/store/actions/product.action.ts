@@ -4,6 +4,9 @@ import { IProduct } from 'src/app/interfaces/product';
 export const loadProducts = createAction(
   '[Product action] loadProducts'
 );
+export const initLoader = createAction(
+  '[Product action] loadProducts'
+)
 export const getProducts = createAction(
   '[Product action] getProducts',
   props<{items: ReadonlyArray<IProduct>}>()

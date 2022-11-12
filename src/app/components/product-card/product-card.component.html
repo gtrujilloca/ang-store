@@ -16,8 +16,8 @@
     <p class="card__desc">
       {{ product.description }}
     </p>
-    <small>
-      {{ product.price}}
+    <small class="card__price">
+      {{ product.price | currency:'USD':'symbol':'1.0'}}
     </small>
   </div>
 </div>
